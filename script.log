@@ -1,0 +1,3 @@
+Running: jg -batch PWM_1.tcl (timeout 5h)
+Output -> outputs/PWM_1.out
+./run_all_jg.sh: line 21: outputs/PWM_1.out: No such file or directory
