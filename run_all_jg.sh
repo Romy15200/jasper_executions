@@ -13,16 +13,28 @@ for tcl in *.tcl; do
 
     base="${tcl%.tcl}"
     out_file="$OUT_DIR/$base.out"
+   
+        # Skip if output already exists
+    if [ -f "$out_file" ]; then
+        echo "Skipping $tcl, output already exists: $out_file"
+        continue
+    fi
 
     echo "Running: jg -batch $tcl (timeout 5h)"
     echo "Output -> $out_file"
-
-    # 5 hours = 18000 seconds (wall-clock timeout)
-    timeout 18000 jg -batch "$tcl" > "$out_file" 2>&1 < /dev/null
+    mkdir "../jgprojects/$base"
+    # 5 hours = 18000 seconds (wall-clock timeout) 
+    if ! timeout 18000 jg -proj "../jgprojects/$base" -batch "$tcl" >> "$out_file" 2>&1 < /dev/null; then
+        echo "Job $tcl failed or timed out" >> "$out_file"
+        echo "Job $tcl failed or timed out, continuing..."
+    else
+        echo "Finished $tcl successfully" >> "$out_file"
+    fi
 
     echo "Finished: $tcl"
     echo "----------------------------------------"
 done
+
 
 echo "All jobs finished."
 
