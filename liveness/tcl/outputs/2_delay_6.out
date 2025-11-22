@@ -1,0 +1,803 @@
+Jasper Apps 2024.06p002 64 bits 2024.09.02 16:28:38 UTC
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2024 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /users/rompel/jasper_executions/liveness/jgprojects/2_delay_6/sessionLogs/session_0
+
+WARNING (WG017): [session]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+WARNING (WG017): [jg_console]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+INFO: successfully checked out license "jasper_fao".
+INFO: reading configuration file "/users/rompel/.config/cadence/jasper.conf".
+% analyze -sv09 ../2_delay_6.sv
+[-- (VERI-1482)] Analyzing Verilog file '/tools/cadence2425/JASPER/jasper_2024.06p002/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../2_delay_6.sv'
+% elaborate -bbox_mul 1000000 -bbox_div 1000000 -bbox_mod 1000000 -bbox_a 1000000
+[INFO (HIER-8002)] ../2_delay_6.sv(13): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] ../2_delay_6.sv(1): compiling module 'DELAY'
+[WARN (VERI-1209)] ../2_delay_6.sv(10): expression size 32 truncated to fit in target size 14
+INFO (ISW003): Top module name is "DELAY".
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          1 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (1 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      1 (1 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+DELAY
+[<embedded>] % reset rst
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+[<embedded>] % clock clk
+[<embedded>] % prove -all
+Ncustom1: Custom engine code is hT3Ng7hPPfiYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSl+CwjiTMAQA
+Bcustom2: Custom engine code is hT3Nm7hPr1Vp3Di1Ra2USNIGL4JypRnLKLAdF6JAyuavO2JfGCiY9OZJhcAcOUnLx5xwNdhILGrAWX9s+z2WDkKwNR7tAfClBEjRFVQeq6DU54boFgEA
+AMcustom3: Custom engine code is hT3Ng7hP/feYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSmmqwm7g9AQA
+Mpcustom4: Custom engine code is hT3NZbhP9fmY2AbBQnsjfOxn6c+6e6yL+/e8fZFmaQrnlgEA
+INFO (IPF036): Starting proof on task: "<embedded>", 2 properties to prove with 0 already proven/unreachable
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 4 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 3 iterations. Assigned values for 14 of 14 design flops, 0 of 0 design latches, 6 of 6 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (IPF031): Settings used for proof thread 0:
+    orchestration                 = on
+    time_limit                    = 86400s
+    per_property_time_limit       = 1s * 10 ^ scan
+    engine_mode                   = auto
+    proofgrid_per_engine_max_jobs = 1
+    max engine jobs               = auto
+    proofgrid_mode                = local
+    proofgrid_restarts            = 10
+AMcustom5: Custom engine code is hT3N1rhP11/52HrFRS21ROp2LOjVTgPvT8L8BGXHgLhaIuqtT4nARFjUqrBL+7pLmaTOzBepZW/Jm8SSrHDybSQtoNiO3y43wk+dEoWlsZizu97Fih6O6lPVG/LpWP5SsUPwlGagLNa1FKEFvwVXyX7//8prySbvSxIHXr5er+z4RAEA
+0: Using multistage preprocessing
+Ncustom6: Custom engine code is hT3OXrhPByJp3TrFSTLhUmMH4KVtJgmTCnNDF46yMXOKY48m4LS5nE7yBzFjA7kDuwO/GhGUpEPiky3p3wmPn3dJZHxFMsafSoObRzSC+tn7sEY0WbTdZ/FV4hL3MYH/b1CIUvXSWR4wqEoVLsmMOD4xIPT4lI1LO6ZCO7PnnWQuLwetnvKlrXx6wCW/A+x+enqslg1YPobi4wEF/EvbzOvcTYdJvl2s4H2yZg2b2ofAVN5WvhWk1HoBAA
+0: Starting reduce
+ADcustom7: Custom engine code is hT3Nv7hPv1752HrFRa2kROx2f/ECJeZB2AZsLdlO8VwmIuqtT4nIDFXclhg+O+o+DMmQCekbheGk0kK28laA9gaOFDXsQp29J3X615HY1IPHJWd6FUFvCHjO+p1k652b5JJvZlShNpGlGSXAiQe/mEAj6tEBAA
+Tricustom8: Custom engine code is hT3Nu7hPt1752DvFRa0kNDiyIV97VyejwM9C/jCLJjdPvusZONHY42VYUy0Q1ZotnhcVtNc56tJ5wbxv6V2+XpdsaSlHck5vfnbYjdwj1OECy9U+7oSQ0SZE3g5ayD+Phuh4odCJTjeKa2k4elM9ldQfkAEA
+Gcustom9: Custom engine code is hT3NibhPDfeYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInncipMGcUXqAadachREE9F2PwhBUZUNw5kHnd4JdXkamORRgEA
+C2custom10: Custom engine code is hT3NirhPjfWYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInncgkrYMMXCYbdK0dUjZIF9d4cJ0rHoBDjwVLBKuG86XYVV00BAA
+AGcustom11: Custom engine code is hT3NirhP/fmYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInnckcwYMMXCYbdK0dUjZIF9d4cJ0rHoBDjwVLBKuHEZnZByh0BAA
+Bcustom12: Custom engine code is hT3NjrhPDfiYQADBZnYcglOvK9PfWxFtenjIyBqfrgr7if/jL/yPOuK1BAflEcW0DxNH2eDIoezN2gxlQFg81RZtiWXh7aiTAidvAQA
+Ncustom13: Custom engine code is hT3NR7hPByFp3TrFSTLhUmMH4KWtJglTyV/c51BHEeZWamnJv767nE6PCak26bd3gf3XGN3rIRheufhDieCJQVISo+gNYUKhiUedBKGtsP/a18svAnlMJZudHxDFwK5ufsyoxsIyiAeSY2oi3tEuoDHr5gw42DFKAG3PqO3CEsl8Azzdt3pl5nGA1Ifv2H02eYsFzWb/nfp8PMb3F0krE/EgBcm8TD9Div8BAA
+Tricustom14: Custom engine code is hT3Nu7hP3fiYQADBZnYcglNHp9bfd7EOeniIqP/ji8sGLQu8yhsFO+wxJ+O+R0bU8g/IewXFomyos+viQnWc2xYNYmMqpo3i40O7DaZR7qfp4YqNx26KRvQ/qx0BAA
+0: Finished reduce in 0s
+0.0.PRE: Performing Proof Simplification...
+0.0.N: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Proof Simplification Iteration 1	[0.00 s]
+0.0.PRE: A trace with 1 cycles was found. [0.00 s]
+INFO (IPF047): 0.0.PRE: The cover property "DELAY.p1:precondition1" was covered in 1 cycles in 0.00 s.
+0.0.N: Proof Simplification Iteration 2	[0.07 s]
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noDeadEnd" was proven in 0.00 s.
+    Use check_assumptions -show -dead_end to show this property in the property table.
+0.0.PRE: A proof was found: No trace exists. [0.00 s]
+INFO (IPF057): 0.0.PRE: The property ":noConflict" was proven in 0.00 s.
+    Use check_assumptions -show to show this property in the property table.
+INFO (IPF047): 0.0.PRE: The cover property ":live" was covered in 1 cycles in 0.00 s.
+    Use check_assumptions -show -live to show this property in the property table.
+0.0.PRE: Proof Simplification completed in 0.07 s
+0: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+0: =============================== ProofGrid start ===============================
+0: ProofGrid usable level: 1
+0: Initial ProofGrid level: 1
+0: ProofGrid is starting event handling
+0.0.Hp: Proofgrid shell started at 4546@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.N: Proofgrid shell started at 4545@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Hp: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.N: Last scan. Per property time limit: 0s
+0.0.N: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.N: Trace Attempt  1	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  2	[0.00 s]
+0.0.N: Trace Attempt  3	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Trace Attempt  4	[0.00 s]
+0.0.N: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  1	[0.01 s]
+0.0.Hp: Last scan. Per property time limit: 0s
+0.0.Hp: Trace Attempt  1	[0.00 s]
+0.0.Hp: Trace Attempt  2	[0.00 s]
+0.0.Hp: Trace Attempt  3	[0.00 s]
+0.0.Hp: Trace Attempt  4	[0.00 s]
+0.0.Hp: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  2	[0.01 s]
+0.0.N: Trace Attempt  3	[0.01 s]
+0.0.N: Trace Attempt  4	[0.01 s]
+0.0.N: Trace Attempt  5	[0.01 s]
+0.0.Bm: Proofgrid shell started at 4598@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Mpcustom4: Proofgrid shell started at 4601@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Bm: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Bm: Ignoring liveness properties
+0.0.Bm: Last scan. Per property time limit: 0s
+0.0.Bm: Trace Attempt  1	[0.00 s]
+0.0.Bm: Trace Attempt  2	[0.00 s]
+0.0.Bm: Trace Attempt  3	[0.00 s]
+0.0.Bm: Trace Attempt  4	[0.00 s]
+0.0.Bm: Trace Attempt  5	[0.00 s]
+0.0.Mpcustom4: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Mpcustom4: Ignoring liveness properties
+0.0.Mpcustom4: All properties either determined or skipped. [0.01 s]
+0.0.Oh: Proofgrid shell started at 4662@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Mpcustom4: Exited with Success (@ 0.06 s)
+0.0.Mpcustom4: Completed, Restart ignored.
+0.0.B: Proofgrid shell started at 4671@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Oh: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Oh: Reached length limit (2147483647) [0.00 s]
+0.0.B: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.B: Last scan. Per property time limit: 0s
+0.0.B: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.B: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt  2	[0.00 s]
+0.0.Oh: Exited with Success (@ 0.06 s)
+0.0.B: Trace Attempt  3	[0.00 s]
+0.0.B: Trace Attempt  4	[0.00 s]
+0.0.B: Trace Attempt  5	[0.00 s]
+0.0.AM: Proofgrid shell started at 4676@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Ht: Proofgrid shell started at 4596@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.AM: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.AM: Last scan. Per property time limit: 0s
+0.0.AM: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.AM: Trace Attempt  1	[0.00 s]
+0.0.AM: Trace Attempt  2	[0.00 s]
+0.0.AM: Trace Attempt  3	[0.00 s]
+0.0.AM: Trace Attempt  4	[0.00 s]
+0.0.AM: Trace Attempt  5	[0.00 s]
+0.0.Ht: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Ht: Last scan. Per property time limit: 0s
+0.0.Ht: Trace Attempt  1	[0.00 s]
+0.0.Ht: Trace Attempt  2	[0.00 s]
+0.0.Ht: Trace Attempt  3	[0.00 s]
+0.0.Ht: Trace Attempt  4	[0.00 s]
+0.0.Ht: Trace Attempt  5	[0.00 s]
+0.0.L: Proofgrid shell started at 4665@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.AM: Trace Attempt  1	[0.00 s]
+0.0.L: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.AM: Trace Attempt  2	[0.00 s]
+0.0.L: Using trace diversification with seed 1 (0.05)
+0.0.L: Using LRU state removal heuristic
+0.0.L: Ignoring liveness properties
+0.0.L: All properties either determined or skipped. [0.00 s]
+0.0.AM: Trace Attempt  3	[0.00 s]
+0.0.AM: Trace Attempt  4	[0.00 s]
+0.0.L: Exited with Success (@ 0.09 s)
+0.0.L: Completed, Restart ignored.
+0.0.AM: Trace Attempt  5	[0.00 s]
+0.0.N: Trace Attempt  1	[0.09 s]
+0.0.N: Trace Attempt  2	[0.09 s]
+0.0.N: Trace Attempt  3	[0.09 s]
+0.0.N: Trace Attempt  4	[0.10 s]
+0.0.AM: Trace Attempt  1	[0.01 s]
+0.0.AM: Trace Attempt  2	[0.01 s]
+0.0.AM: Trace Attempt  3	[0.01 s]
+0.0.N: Trace Attempt  5	[0.10 s]
+0.0.AM: Trace Attempt  4	[0.01 s]
+0.0.AM: Trace Attempt  5	[0.01 s]
+0.0.AM: Trace Attempt  1	[0.04 s]
+0.0.AM: Trace Attempt  2	[0.04 s]
+0.0.AM: Trace Attempt  3	[0.04 s]
+0.0.AM: Trace Attempt  4	[0.04 s]
+0.0.AM: Trace Attempt  5	[0.04 s]
+0.0.AM: Trace Attempt  1	[0.11 s]
+0.0.AM: Trace Attempt  2	[0.11 s]
+0.0.AM: Trace Attempt  3	[0.11 s]
+0.0.AM: Trace Attempt  4	[0.12 s]
+0.0.AM: Trace Attempt  5	[0.12 s]
+0.0.N: Trace Attempt  1	[0.43 s]
+0.0.N: Trace Attempt  2	[0.43 s]
+0.0.N: Trace Attempt  3	[0.43 s]
+0.0.N: Trace Attempt  4	[0.43 s]
+0.0.N: Trace Attempt  5	[0.43 s]
+0.0.AM: Trace Attempt  1	[0.46 s]
+0.0.AM: Trace Attempt  2	[0.46 s]
+0.0.AM: Trace Attempt  3	[0.46 s]
+0.0.AM: Trace Attempt  4	[0.46 s]
+0.0.AM: Trace Attempt  5	[0.47 s]
+0.0.N: Trace Attempt  1	[1.89 s]
+0.0.N: Trace Attempt  2	[1.89 s]
+0.0.N: Trace Attempt  3	[1.89 s]
+0.0.N: Trace Attempt  4	[1.89 s]
+0.0.N: Trace Attempt  5	[1.90 s]
+0.0.AM: Trace Attempt  1	[1.81 s]
+0.0.AM: Trace Attempt  2	[1.81 s]
+0.0.AM: Trace Attempt  3	[1.81 s]
+0.0.AM: Trace Attempt  4	[1.81 s]
+0.0.AM: Trace Attempt  5	[1.81 s]
+0.0.Hp: Trace Attempt 603	[4.01 s]
+0.0.Bm: Trace Attempt 1650	[4.00 s]
+0.0.B: Trace Attempt 1645	[4.00 s]
+0.0.Ht: Trace Attempt 1780	[4.00 s]
+0.0.AM: Trace Attempt 193	[5.83 s]
+0.0.N: Trace Attempt 195	[5.93 s]
+0.0.N: Trace Attempt  1	[7.73 s]
+0.0.N: Trace Attempt  2	[7.73 s]
+0.0.N: Trace Attempt  3	[7.73 s]
+0.0.N: Trace Attempt  4	[7.73 s]
+0.0.N: Trace Attempt  5	[7.73 s]
+0.0.Hp: Trace Attempt 846	[8.01 s]
+0.0.Bm: Trace Attempt 2283	[8.01 s]
+0.0.B: Trace Attempt 2270	[8.01 s]
+0.0.Ht: Trace Attempt 2419	[8.00 s]
+0.0.AM: Trace Attempt  1	[8.44 s]
+0.0.AM: Trace Attempt  2	[8.45 s]
+0.0.AM: Trace Attempt  3	[8.45 s]
+0.0.AM: Trace Attempt  4	[8.45 s]
+0.0.AM: Trace Attempt  5	[8.45 s]
+0.0.N: Trace Attempt 188	[11.77 s]
+0.0.Hp: Trace Attempt 1032	[12.03 s]
+0.0.Bm: Trace Attempt 2772	[12.01 s]
+0.0.B: Trace Attempt 2756	[12.01 s]
+0.0.Ht: Trace Attempt 2929	[12.01 s]
+0.0.AM: Trace Attempt 170	[12.47 s]
+0.0.N: Trace Attempt  1	[13.96 s]
+0.0.N: Trace Attempt  2	[13.96 s]
+0.0.N: Trace Attempt  3	[13.96 s]
+0.0.N: Trace Attempt  4	[13.96 s]
+0.0.N: Trace Attempt  5	[13.96 s]
+0.0.Bm: Trace Attempt 3179	[16.01 s]
+0.0.Hp: Trace Attempt 1188	[16.05 s]
+0.0.B: Trace Attempt 3162	[16.02 s]
+0.0.Ht: Trace Attempt 3346	[16.01 s]
+0.0.AM: Trace Attempt 244	[16.51 s]
+0.0.N: Trace Attempt 187	[17.99 s]
+0.0.Bm: Trace Attempt 3532	[20.01 s]
+0.0.Hp: Trace Attempt 1324	[20.05 s]
+0.0.B: Trace Attempt 3513	[20.02 s]
+0.0.Ht: Trace Attempt 3723	[20.02 s]
+0.0.N: Trace Attempt  1	[20.15 s]
+0.0.N: Trace Attempt  2	[20.15 s]
+0.0.N: Trace Attempt  3	[20.15 s]
+0.0.N: Trace Attempt  4	[20.15 s]
+0.0.N: Trace Attempt  5	[20.15 s]
+0.0.AM: Trace Attempt 283	[20.57 s]
+0.0.Bm: Trace Attempt 3855	[24.02 s]
+0.0.Hp: Trace Attempt 1448	[24.06 s]
+0.0.B: Trace Attempt 3838	[24.03 s]
+0.0.Ht: Trace Attempt 4073	[24.03 s]
+0.0.N: Trace Attempt 186	[24.15 s]
+0.0.AM: Trace Attempt 330	[24.61 s]
+0.0.N: Trace Attempt  1	[26.32 s]
+0.0.N: Trace Attempt  2	[26.32 s]
+0.0.N: Trace Attempt  3	[26.32 s]
+0.0.N: Trace Attempt  4	[26.32 s]
+0.0.N: Trace Attempt  5	[26.32 s]
+0.0.Bm: Trace Attempt 4152	[28.04 s]
+0.0.Hp: Trace Attempt 1561	[28.08 s]
+0.0.B: Trace Attempt 4135	[28.03 s]
+0.0.Ht: Trace Attempt 4370	[28.05 s]
+0.0.AM: Trace Attempt 371	[28.64 s]
+0.0.N: Trace Attempt 187	[30.36 s]
+0.0.Bm: Trace Attempt 4433	[32.04 s]
+0.0.Hp: Trace Attempt 1664	[32.09 s]
+0.0.B: Trace Attempt 4417	[32.04 s]
+0.0.Ht: Trace Attempt 4661	[32.06 s]
+0.0.N: Trace Attempt  1	[32.53 s]
+0.0.N: Trace Attempt  2	[32.54 s]
+0.0.N: Trace Attempt  3	[32.54 s]
+0.0.N: Trace Attempt  4	[32.54 s]
+0.0.N: Trace Attempt  5	[32.54 s]
+0.0.AM: Trace Attempt 412	[32.76 s]
+0.0.Bm: Trace Attempt 4694	[36.06 s]
+0.0.B: Trace Attempt 4680	[36.04 s]
+0.0.Hp: Trace Attempt 1760	[36.10 s]
+0.0.Ht: Trace Attempt 4932	[36.07 s]
+0.0.N: Trace Attempt 187	[36.54 s]
+0.0.AM: Trace Attempt 451	[36.78 s]
+0.0.N: Trace Attempt  1	[38.78 s]
+0.0.N: Trace Attempt  2	[38.78 s]
+0.0.N: Trace Attempt  3	[38.78 s]
+0.0.N: Trace Attempt  4	[38.78 s]
+0.0.N: Trace Attempt  5	[38.78 s]
+0.0.Bm: Trace Attempt 4930	[40.06 s]
+0.0.B: Trace Attempt 4919	[40.05 s]
+0.0.Hp: Trace Attempt 1849	[40.14 s]
+0.0.Ht: Trace Attempt 5174	[40.08 s]
+0.0.AM: Trace Attempt 405	[40.79 s]
+0.0.N: Trace Attempt 186	[42.81 s]
+0.0.Bm: Trace Attempt 5140	[44.08 s]
+0.0.B: Trace Attempt 5130	[44.06 s]
+0.0.Hp: Trace Attempt 1931	[44.15 s]
+0.0.Ht: Trace Attempt 5399	[44.09 s]
+0.0.N: Trace Attempt  1	[45.15 s]
+0.0.N: Trace Attempt  2	[45.15 s]
+0.0.N: Trace Attempt  3	[45.15 s]
+0.0.N: Trace Attempt  4	[45.15 s]
+0.0.N: Trace Attempt  5	[45.15 s]
+0.0.AM: Trace Attempt 513	[46.10 s]
+0.0.AM: Trace Attempt  1	[46.59 s]
+0.0.AM: Trace Attempt  2	[46.60 s]
+0.0.AM: Trace Attempt  3	[46.60 s]
+0.0.AM: Trace Attempt  4	[46.60 s]
+0.0.AM: Trace Attempt  5	[46.60 s]
+0.0.Bm: Trace Attempt 5347	[48.09 s]
+0.0.B: Trace Attempt 5339	[48.07 s]
+0.0.Ht: Trace Attempt 5628	[48.10 s]
+0.0.Hp: Trace Attempt 2012	[48.20 s]
+0.0.N: Trace Attempt 186	[49.16 s]
+0.0.AM: Trace Attempt 177	[50.61 s]
+0.0.N: Trace Attempt  1	[51.40 s]
+0.0.N: Trace Attempt  2	[51.41 s]
+0.0.N: Trace Attempt  3	[51.41 s]
+0.0.N: Trace Attempt  4	[51.41 s]
+0.0.N: Trace Attempt  5	[51.41 s]
+0.0.Bm: Trace Attempt 5560	[52.09 s]
+0.0.B: Trace Attempt 5553	[52.09 s]
+0.0.Ht: Trace Attempt 5854	[52.11 s]
+0.0.Hp: Trace Attempt 2092	[52.24 s]
+0.0.AM: Trace Attempt 247	[54.74 s]
+0.0.N: Trace Attempt 186	[55.43 s]
+0.0.Bm: Trace Attempt 5764	[56.11 s]
+0.0.B: Trace Attempt 5758	[56.10 s]
+0.0.Ht: Trace Attempt 6068	[56.12 s]
+0.0.Hp: Trace Attempt 2142	[56.39 s]
+0.0.N: Trace Attempt  1	[57.73 s]
+0.0.N: Trace Attempt  2	[57.73 s]
+0.0.N: Trace Attempt  3	[57.73 s]
+0.0.N: Trace Attempt  4	[57.73 s]
+0.0.N: Trace Attempt  5	[57.73 s]
+0.0.AM: Trace Attempt 279	[58.75 s]
+0.0.Bm: Trace Attempt 5960	[60.11 s]
+0.0.B: Trace Attempt 5954	[60.10 s]
+0.0.Ht: Trace Attempt 6273	[60.13 s]
+0.0.Hp: Trace Attempt 2169	[60.43 s]
+0.0.N: Trace Attempt 187	[61.77 s]
+0.0.AM: Trace Attempt 322	[62.90 s]
+0.0.N: Trace Attempt  1	[63.87 s]
+0.0.N: Trace Attempt  2	[63.88 s]
+0.0.N: Trace Attempt  3	[63.88 s]
+0.0.N: Trace Attempt  4	[63.88 s]
+0.0.N: Trace Attempt  5	[63.88 s]
+0.0.Bm: Trace Attempt 6149	[64.12 s]
+0.0.B: Trace Attempt 6144	[64.12 s]
+0.0.Ht: Trace Attempt 6463	[64.14 s]
+0.0.Hp: Trace Attempt 2196	[64.56 s]
+0.0.AM: Trace Attempt 359	[66.92 s]
+0.0.N: Trace Attempt 186	[67.88 s]
+0.0.Bm: Trace Attempt 6329	[68.14 s]
+0.0.B: Trace Attempt 6324	[68.13 s]
+0.0.Ht: Trace Attempt 6657	[68.17 s]
+0.0.Hp: Trace Attempt 2222	[68.58 s]
+0.0.N: Trace Attempt  1	[70.69 s]
+0.0.N: Trace Attempt  2	[70.69 s]
+0.0.N: Trace Attempt  3	[70.69 s]
+0.0.N: Trace Attempt  4	[70.69 s]
+0.0.N: Trace Attempt  5	[70.69 s]
+0.0.AM: Trace Attempt 388	[70.99 s]
+0.0.Bm: Trace Attempt 6500	[72.15 s]
+0.0.B: Trace Attempt 6494	[72.14 s]
+0.0.Ht: Trace Attempt 6839	[72.18 s]
+0.0.Hp: Trace Attempt 2246	[72.70 s]
+0.0.N: Trace Attempt 184	[74.73 s]
+0.0.AM: Trace Attempt 421	[75.04 s]
+0.0.Bm: Trace Attempt 6668	[76.17 s]
+0.0.B: Trace Attempt 6661	[76.15 s]
+0.0.Ht: Trace Attempt 7022	[76.19 s]
+0.0.Hp: Trace Attempt 2270	[76.80 s]
+0.0.N: Trace Attempt 243	[78.74 s]
+0.0.AM: Trace Attempt 454	[79.06 s]
+0.0.Bm: Trace Attempt 6827	[80.18 s]
+0.0.B: Trace Attempt 6820	[80.16 s]
+0.0.Ht: Trace Attempt 7190	[80.22 s]
+0.0.Hp: Trace Attempt 2295	[80.82 s]
+0.0.N: Trace Attempt 287	[82.79 s]
+0.0.AM: Trace Attempt 476	[83.22 s]
+0.0.Bm: Trace Attempt 6984	[84.19 s]
+0.0.B: Trace Attempt 6977	[84.18 s]
+0.0.Ht: Trace Attempt 7356	[84.24 s]
+0.0.Hp: Trace Attempt 2315	[84.95 s]
+0.0.N: Trace Attempt 331	[86.80 s]
+0.0.AM: Trace Attempt 484	[87.50 s]
+0.0.Bm: Trace Attempt 7139	[88.19 s]
+0.0.B: Trace Attempt 7131	[88.19 s]
+0.0.Ht: Trace Attempt 7518	[88.24 s]
+0.0.Hp: Trace Attempt 2336	[89.06 s]
+0.0.N: Trace Attempt 358	[90.92 s]
+0.0.AM: Trace Attempt 495	[91.91 s]
+0.0.Bm: Trace Attempt 7292	[92.21 s]
+0.0.B: Trace Attempt 7282	[92.19 s]
+0.0.Ht: Trace Attempt 7679	[92.24 s]
+0.0.Hp: Trace Attempt 2357	[93.20 s]
+0.0.N: Trace Attempt 395	[95.00 s]
+0.0.AM: Trace Attempt 508	[96.09 s]
+0.0.Bm: Trace Attempt 7439	[96.23 s]
+0.0.B: Trace Attempt 7428	[96.22 s]
+0.0.Ht: Trace Attempt 7835	[96.25 s]
+0.0.Hp: Trace Attempt 2377	[97.21 s]
+0.0.N: Trace Attempt 423	[99.03 s]
+0.0.Bm: Trace Attempt 7581	[100.24 s]
+0.0.B: Trace Attempt 7569	[100.23 s]
+0.0.AM: Trace Attempt 523	[100.23 s]
+0.0.Ht: Trace Attempt 7989	[100.26 s]
+0.0.Hp: Trace Attempt 2397	[101.30 s]
+0.0.N: Trace Attempt 452	[103.08 s]
+0.0.Bm: Trace Attempt 7718	[104.27 s]
+0.0.B: Trace Attempt 7704	[104.25 s]
+0.0.Ht: Trace Attempt 8138	[104.26 s]
+0.0.AM: Trace Attempt 540	[104.50 s]
+0.0.Hp: Trace Attempt 2417	[105.55 s]
+0.0.N: Trace Attempt 463	[107.10 s]
+0.0.N: Trace Attempt  1	[107.12 s]
+0.0.N: Trace Attempt  2	[107.12 s]
+0.0.N: Trace Attempt  3	[107.12 s]
+0.0.N: Trace Attempt  4	[107.13 s]
+0.0.N: Trace Attempt  5	[107.13 s]
+0.0.B: Trace Attempt 7825	[108.27 s]
+0.0.Bm: Trace Attempt 7840	[108.30 s]
+0.0.Ht: Trace Attempt 8261	[108.27 s]
+0.0.AM: Trace Attempt 554	[108.56 s]
+0.0.Hp: Trace Attempt 2435	[109.58 s]
+0.0.N: Trace Attempt 179	[111.15 s]
+0.0.Bm: Trace Attempt 7974	[112.30 s]
+0.0.Ht: Trace Attempt 8404	[112.27 s]
+0.0.B: Trace Attempt 7958	[112.30 s]
+0.0.AM: Trace Attempt 569	[112.74 s]
+0.0.Hp: Trace Attempt 2455	[113.75 s]
+0.0.N: Trace Attempt 241	[115.18 s]
+0.0.Bm: Trace Attempt 8105	[116.30 s]
+0.0.Ht: Trace Attempt 8544	[116.28 s]
+0.0.B: Trace Attempt 8088	[116.32 s]
+0.0.AM: Trace Attempt 582	[116.84 s]
+0.0.Hp: Trace Attempt 2475	[117.96 s]
+0.0.N: Trace Attempt 284	[119.23 s]
+0.0.Bm: Trace Attempt 8239	[120.30 s]
+0.0.Ht: Trace Attempt 8686	[120.29 s]
+0.0.B: Trace Attempt 8221	[120.34 s]
+0.0.AM: Trace Attempt 595	[120.84 s]
+0.0.Hp: Trace Attempt 2495	[122.16 s]
+0.0.N: Trace Attempt 330	[123.29 s]
+0.0.Bm: Trace Attempt 8376	[124.31 s]
+0.0.Ht: Trace Attempt 8832	[124.31 s]
+0.0.B: Trace Attempt 8358	[124.34 s]
+0.0.AM: Trace Attempt 603	[125.01 s]
+0.0.Hp: Trace Attempt 2515	[126.37 s]
+0.0.N: Trace Attempt 356	[127.35 s]
+0.0.Bm: Trace Attempt 8509	[128.34 s]
+0.0.Ht: Trace Attempt 8972	[128.33 s]
+0.0.B: Trace Attempt 8491	[128.37 s]
+0.0.AM: Trace Attempt 612	[129.04 s]
+0.0.Hp: Trace Attempt 2534	[130.47 s]
+0.0.N: Trace Attempt 391	[131.35 s]
+0.0.Bm: Trace Attempt 8638	[132.36 s]
+0.0.Ht: Trace Attempt 9107	[132.34 s]
+0.0.B: Trace Attempt 8620	[132.40 s]
+0.0.AM: Trace Attempt 621	[133.83 s]
+0.0.Hp: Trace Attempt 2553	[134.59 s]
+0.0.N: Trace Attempt 421	[135.47 s]
+0.0.Bm: Trace Attempt 8765	[136.37 s]
+0.0.Ht: Trace Attempt 9237	[136.38 s]
+0.0.B: Trace Attempt 8748	[136.43 s]
+0.0.AM: Trace Attempt 628	[138.07 s]
+0.0.Hp: Trace Attempt 2575	[138.72 s]
+0.0.N: Trace Attempt 450	[139.54 s]
+0.0.Bm: Trace Attempt 8888	[140.40 s]
+0.0.Ht: Trace Attempt 9363	[140.40 s]
+0.0.B: Trace Attempt 8871	[140.45 s]
+0.0.AM: Trace Attempt 636	[142.73 s]
+0.0.Hp: Trace Attempt 2593	[142.84 s]
+0.0.N: Trace Attempt 464	[143.94 s]
+0.0.N: Trace Attempt  1	[143.96 s]
+0.0.N: Trace Attempt  2	[143.97 s]
+0.0.N: Trace Attempt  3	[143.97 s]
+0.0.N: Trace Attempt  4	[143.97 s]
+0.0.N: Trace Attempt  5	[143.97 s]
+0.0.Bm: Trace Attempt 9006	[144.40 s]
+0.0.Ht: Trace Attempt 9487	[144.41 s]
+0.0.B: Trace Attempt 8990	[144.47 s]
+0.0.Hp: Trace Attempt 2614	[147.06 s]
+0.0.AM: Trace Attempt 643	[147.26 s]
+0.0.N: Trace Attempt 183	[147.98 s]
+0.0.Bm: Trace Attempt 9130	[148.42 s]
+0.0.Ht: Trace Attempt 9613	[148.42 s]
+0.0.B: Trace Attempt 9114	[148.49 s]
+0.0.Hp: Trace Attempt 2635	[151.10 s]
+0.0.AM: Trace Attempt 649	[151.65 s]
+0.0.N: Trace Attempt 243	[152.06 s]
+0.0.Bm: Trace Attempt 9254	[152.43 s]
+0.0.Ht: Trace Attempt 9742	[152.44 s]
+0.0.B: Trace Attempt 9239	[152.50 s]
+0.0.Hp: Trace Attempt 2653	[155.31 s]
+0.0.N: Trace Attempt 286	[156.07 s]
+0.0.Bm: Trace Attempt 9374	[156.45 s]
+0.0.Ht: Trace Attempt 9869	[156.46 s]
+0.0.B: Trace Attempt 9360	[156.53 s]
+0.0.AM: Trace Attempt 655	[156.68 s]
+0.0.Hp: Trace Attempt 2674	[159.37 s]
+0.0.N: Trace Attempt 331	[160.13 s]
+0.0.Bm: Trace Attempt 9490	[160.45 s]
+0.0.Ht: Trace Attempt 9993	[160.46 s]
+0.0.B: Trace Attempt 9477	[160.54 s]
+0.0.AM: Trace Attempt 662	[160.93 s]
+0.0.Hp: Trace Attempt 2693	[163.57 s]
+0.0.N: Trace Attempt 357	[164.15 s]
+0.0.Bm: Trace Attempt 9600	[164.45 s]
+0.0.B: Trace Attempt 9588	[164.56 s]
+0.0.AM: Trace Attempt 667	[166.39 s]
+0.0.Hp: Trace Attempt 2711	[167.66 s]
+0.0.N: Trace Attempt 391	[168.23 s]
+0.0.Bm: Trace Attempt 9706	[168.49 s]
+0.0.B: Trace Attempt 9693	[168.57 s]
+0.0.AM: Trace Attempt 673	[170.73 s]
+0.0.Hp: Trace Attempt 2730	[171.66 s]
+0.0.N: Trace Attempt 420	[172.31 s]
+0.0.Bm: Trace Attempt 9808	[172.49 s]
+0.0.B: Trace Attempt 9797	[172.61 s]
+0.0.AM: Trace Attempt 680	[175.23 s]
+0.0.Hp: Trace Attempt 2747	[175.91 s]
+0.0.N: Trace Attempt 447	[176.38 s]
+0.0.Bm: Trace Attempt 9907	[176.50 s]
+0.0.B: Trace Attempt 9897	[176.61 s]
+0.0.AM: Trace Attempt 686	[179.40 s]
+0.0.Hp: Trace Attempt 2766	[179.93 s]
+0.0.Ht: Trace Attempt 10004	[180.36 s]
+0.0.B: Trace Attempt 9996	[180.61 s]
+0.0.Bm: Trace Attempt 10003	[180.88 s]
+0.0.N: Trace Attempt 464	[178.64 s]
+0.0.N: Stopped processing property "DELAY.p1"	[180.95 s].
+0.0.N: Morphing to Ncustom1
+0.0.N: All properties determined. [0.00 s]
+0.0.N: Exited with Success (@ 0.00 s)
+0.0.Ncustom1: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Ncustom1: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.Ncustom1: Trace Attempt 464	[0.04 s]
+0.0.Tri: Proofgrid shell started at 13006@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.Tri: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.AM: Trace Attempt 688	[180.71 s]
+0.0.AM: Stopped processing property "DELAY.p1"	[181.05 s].
+0.0.AM: Morphing to AMcustom3
+0.0.Tri: Last scan. Per property time limit: 0s
+0.0.Tri: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.Tri: Trace Attempt  1	[0.00 s]
+0.0.B: Trace Attempt 10002	[180.89 s]
+0.0.B: Stopped processing property "DELAY.p1"	[181.13 s].
+0.0.B: Morphing to Bcustom2
+0.0.B: All properties determined. [0.00 s]
+0.0.B: Exited with Success (@ 0.00 s)
+0.0.AM: All properties determined. [0.00 s]
+0.0.AM: Exited with Success (@ 0.00 s)
+0.0.Bcustom2: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.Bcustom2: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.Bcustom2: Trace Attempt  1	[0.00 s]
+0.0.Bcustom2: Trace Attempt  2	[0.00 s]
+0.0.Bcustom2: Trace Attempt  1	[0.00 s]
+0.0.Bcustom2: Trace Attempt  2	[0.00 s]
+0.0.Bcustom2: Trace Attempt  3	[0.00 s]
+0.0.Bcustom2: Trace Attempt  4	[0.00 s]
+0.0.Bcustom2: Trace Attempt  5	[0.00 s]
+0.0.Bcustom2: Trace Attempt  1	[0.00 s]
+0.0.Bcustom2: Trace Attempt  2	[0.00 s]
+0.0.Bcustom2: Trace Attempt  3	[0.00 s]
+0.0.Bcustom2: Trace Attempt  4	[0.00 s]
+0.0.Bcustom2: Trace Attempt  5	[0.00 s]
+0.0.AMcustom3: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.AMcustom3: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.AMcustom3: Trace Attempt  1	[0.00 s]
+0.0.AMcustom3: Trace Attempt  2	[0.00 s]
+0.0.AMcustom3: Trace Attempt  3	[0.00 s]
+0.0.AMcustom3: Trace Attempt  4	[0.00 s]
+0.0.AMcustom3: Trace Attempt  5	[0.00 s]
+0.0.AMcustom3: Trace Attempt  1	[0.00 s]
+0.0.AMcustom3: Trace Attempt  2	[0.00 s]
+0.0.AMcustom3: Trace Attempt  3	[0.00 s]
+0.0.AMcustom3: Trace Attempt  4	[0.00 s]
+0.0.AMcustom3: Trace Attempt  5	[0.00 s]
+0.0.Bcustom2: Trace Attempt  1	[0.00 s]
+0.0.Bcustom2: Trace Attempt  2	[0.00 s]
+0.0.Bcustom2: Trace Attempt  3	[0.00 s]
+0.0.Bcustom2: Trace Attempt  4	[0.00 s]
+0.0.Bcustom2: Trace Attempt  5	[0.00 s]
+0.0.Bcustom2: Trace Attempt  1	[0.01 s]
+0.0.Bcustom2: Trace Attempt  2	[0.01 s]
+0.0.Bcustom2: Trace Attempt  3	[0.01 s]
+0.0.Bcustom2: Trace Attempt  4	[0.01 s]
+0.0.Bcustom2: Trace Attempt  5	[0.01 s]
+0.0.AMcustom3: Trace Attempt  1	[0.01 s]
+0.0.AMcustom3: Trace Attempt  2	[0.01 s]
+0.0.AMcustom3: Trace Attempt  3	[0.01 s]
+0.0.AMcustom3: Trace Attempt  4	[0.01 s]
+0.0.AMcustom3: Trace Attempt  5	[0.01 s]
+0.0.Tri:    0.00" ---- Launching main thread ----
+0.0.Bcustom2: Trace Attempt  1	[0.02 s]
+0.0.Bcustom2: Trace Attempt  2	[0.02 s]
+0.0.Bcustom2: Trace Attempt  3	[0.02 s]
+0.0.Bcustom2: Trace Attempt  4	[0.02 s]
+0.0.Bcustom2: Trace Attempt  5	[0.02 s]
+0.0.D: Proofgrid shell started at 13008@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.D: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.D: Last scan. Per property time limit: 0s
+0.0.D: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.D: Trace Attempt  1	[0.00 s]
+0.0.D: Trace Attempt  2	[0.00 s]
+0.0.D: Trace Attempt  4	[0.00 s]
+0.0.Bcustom2: Trace Attempt  1	[0.04 s]
+0.0.Bcustom2: Trace Attempt  2	[0.04 s]
+0.0.Bcustom2: Trace Attempt  3	[0.04 s]
+0.0.Bcustom2: Trace Attempt  4	[0.04 s]
+0.0.Bcustom2: Trace Attempt  5	[0.04 s]
+0.0.AMcustom3: Trace Attempt  1	[0.04 s]
+0.0.AMcustom3: Trace Attempt  2	[0.04 s]
+0.0.AMcustom3: Trace Attempt  3	[0.04 s]
+0.0.AMcustom3: Trace Attempt  4	[0.04 s]
+0.0.AMcustom3: Trace Attempt  5	[0.04 s]
+0.0.Bcustom2: Trace Attempt  1	[0.08 s]
+0.0.Bcustom2: Trace Attempt  2	[0.08 s]
+0.0.Bcustom2: Trace Attempt  3	[0.08 s]
+0.0.Bcustom2: Trace Attempt  4	[0.08 s]
+0.0.Bcustom2: Trace Attempt  5	[0.08 s]
+0.0.AMcustom3: Trace Attempt  1	[0.12 s]
+0.0.AMcustom3: Trace Attempt  2	[0.13 s]
+0.0.AMcustom3: Trace Attempt  3	[0.13 s]
+0.0.AMcustom3: Trace Attempt  4	[0.13 s]
+0.0.AMcustom3: Trace Attempt  5	[0.13 s]
+0.0.Tri:    0.26" ---- Launching abstraction thread ----
+0.0.Tri:    0.28" ---- Launching multi-phase simplification thread ----
+0.0.Tri:    0.34" ---- Launching liveness simplification thread ----
+0.0.Bcustom2: Trace Attempt  1	[0.50 s]
+0.0.Bcustom2: Trace Attempt  2	[0.50 s]
+0.0.Bcustom2: Trace Attempt  3	[0.50 s]
+0.0.Bcustom2: Trace Attempt  4	[0.50 s]
+0.0.Bcustom2: Trace Attempt  5	[0.50 s]
+0.0.AMcustom3: Trace Attempt  1	[0.52 s]
+0.0.AMcustom3: Trace Attempt  2	[0.53 s]
+0.0.AMcustom3: Trace Attempt  3	[0.53 s]
+0.0.AMcustom3: Trace Attempt  4	[0.53 s]
+0.0.AMcustom3: Trace Attempt  5	[0.53 s]
+0.0.Tri:    1.18" Simplification phase 1 complete
+0.0.D: Trace Attempt 64	[0.78 s]
+0.0.D: Stopped processing property "DELAY.p1"	[1.24 s].
+0.0.D: Morphing to M
+0.0.D: All properties determined. [0.00 s]
+0.0.D: Exited with Success (@ 0.00 s)
+0.0.M: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+0.0.M: Starting proof for property "DELAY.p1"	[0.00 s].
+0.0.M: Trace Attempt  1	[0.00 s]
+0.0.M: Trace Attempt  2	[0.00 s]
+0.0.M: Trace Attempt  3	[0.00 s]
+0.0.M: Trace Attempt  4	[0.00 s]
+0.0.M: Trace Attempt  5	[0.00 s]
+0.0.Ncustom1: Requesting engine job to terminate
+0.0.Bcustom2: Requesting engine job to terminate
+0.0.AMcustom3: Requesting engine job to terminate
+0.0.Tri: Requesting engine job to terminate
+0.0.M: Requesting engine job to terminate
+0.0.Hp: Requesting engine job to terminate
+0.0.Ht: Requesting engine job to terminate
+0.0.Bm: Requesting engine job to terminate
+INFO (IPF144): 0: Initiating shutdown of proof [182.48 s]
+0.0.Tri: A proof was found: No trace exists. [1.32 s]
+INFO (IPF057): 0.0.Tri: The property "DELAY.p1" was proven in 1.33 s.
+0.0.M: Trace Attempt 14	[0.02 s]
+0.0.M: Stopped processing property "DELAY.p1"	[0.02 s].
+0.0.M: All properties determined. [0.02 s]
+0.0.M: Exited with Success (@ 182.48 s)
+0: ProofGrid usable level: 0
+0.0.AMcustom3: Trace Attempt 81	[1.28 s]
+0.0.AMcustom3: Stopped processing property "DELAY.p1"	[1.29 s].
+0.0.AMcustom3: All properties determined. [1.29 s]
+0.0.Ncustom1: Stopped processing property "DELAY.p1"	[1.52 s].
+0.0.Ncustom1: All properties determined. [1.53 s]
+0.0.AMcustom3: Exited with Success (@ 182.50 s)
+0.0.Ncustom1: Exited with Success (@ 182.50 s)
+0.0.Hp: Trace Attempt 2776	[182.46 s]
+0.0.Hp: All properties determined. [182.52 s]
+0.0.AMcustom5: Proofgrid shell started at 13138@vlsi-ria85(local) jg_4277_vlsi-ria85_1
+0.0.AMcustom5: Requesting engine job to terminate
+0.0.AMcustom5: Preventing job from starting because proof is shutting down.
+0.0.AMcustom5: Requesting engine job to terminate
+0.0.AMcustom5: Interrupted. [0.00 s]
+0.0.AMcustom5: Exited with Success (@ 182.55 s)
+0.0.Bm: Trace Attempt 10009	[182.36 s]
+0.0.Bm: All properties determined. [182.57 s]
+0.0.Bm: Exited with Success (@ 182.63 s)
+0.0.Ht: Trace Attempt 10005	[180.80 s]
+0.0.Ht: All properties determined. [182.58 s]
+0.0.Tri: Stopped processing property "DELAY.p1"	[1.52 s].
+0.0.Tri: All properties determined. [1.52 s]
+0.0.Tri: Exited with Success (@ 182.68 s)
+0.0.Hp: Exited with Success (@ 182.78 s)
+0.0.Ht: Exited with Success (@ 182.83 s)
+0.0.Bcustom2: Trace Attempt  1	[2.37 s]
+0.0.Bcustom2: Stopped processing property "DELAY.p1"	[2.37 s].
+0.0.Bcustom2: All properties determined. [2.37 s]
+0.0.Bcustom2: Exited with Success (@ 183.59 s)
+0: --------------------------------------------------------------
+ProofGrid Summary (utilization 99.92 %)
+--------------------------------------------------------------
+     engines started                               :    16
+     engine jobs started                           :    12
+
+    Average time in state (seconds)
+    ------------------------------------------------------
+    Engine  Pending     Running        Dead    Utilization
+    ------------------------------------------------------
+     Hp        0.04      182.48        0.00       99.98 %
+     Ht        0.08      182.39        0.00       99.96 %
+     Bm        0.03      182.44        0.00       99.98 %
+    Mpcustom4        0.03        0.02        0.00       40.59 %
+     Oh        0.04        0.00        0.00        3.56 %
+      L        0.08        0.00        0.00        3.32 %
+    Ncustom1        0.04      182.46        0.00       99.98 %
+    Bcustom2        0.04      182.20        0.00       99.98 %
+    AMcustom3        0.06      182.16        0.00       99.97 %
+    Tri        0.16        1.34        0.00       89.33 %
+      M        0.21        1.26        0.00       85.52 %
+    AMcustom5        0.09        0.00        0.00        0.00 %
+    all        0.08       91.40        0.00       99.92 %
+
+    Total time in state (seconds)
+    -----------------------------------------
+            Pending     Running        Dead  
+    -----------------------------------------
+               0.91     1096.76        0.00
+
+    Data read    : 6.39 MiB
+    Data written : 4.17 kiB
+
+0: All pending notifications were processed.
+INFO (IPF059): 0: Completed proof on task: "<embedded>"
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 2
+                 assertions                   : 1
+                  - proven                    : 1 (100%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 0 (0%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+                 covers                       : 1
+                  - unreachable               : 0 (0%)
+                  - bounded_unreachable (user): 0 (0%)
+                  - covered                   : 1 (100%)
+                  - ar_covered                : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+determined
+[<embedded>] % exit -force
+[<embedded>] % INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 2.024 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.
+Finished 2_delay_6.tcl successfully
