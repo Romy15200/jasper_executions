@@ -28,5 +28,5 @@ module PWM_TOP (input clk, input [3:0] sw, output reg pulse_red, output reg lb_p
       ub_pulse = 0;
   end
 
-	p1: assert property  ((@(posedge clk) (always s_eventually !ub_pulse) and s_nexttime always (!ub_pulse imples !pulse_red))) ;
+	p1: assert property  ((@(posedge clk) (always s_eventually !ub_pulse) and s_nexttime always (!ub_pulse implies !pulse_red))) ;
 endmodule
