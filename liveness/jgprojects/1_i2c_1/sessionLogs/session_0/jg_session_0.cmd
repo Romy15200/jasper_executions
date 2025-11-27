@@ -5,8 +5,13 @@
 # version   : 2024.06p002 64 bits
 # build date: 2024.09.02 16:28:38 UTC
 # ----------------------------------------
-# started   : 2025-11-27 00:09:53 IST
+# started   : 2025-11-27 12:34:22 IST
 # hostname  : vlsi-ria85.vlsidomain
-# pid       : 22740
-# arguments : '-label' 'session_0' '-console' '//127.0.0.1:46226' '-nowindow' '-style' 'windows' '-exitonerror' '-data' 'AAAAynicY2RgYLCp////PwMYMD6A0Aw2jAyoAMRnQhUJbEChGRhYYZphSliAmItBl6GAoYghnyELyNNi0ANCfSA7HS6aypDMUMJQDBQ1ZIhnyGQwAvLjgWwGBh6g3iSGRKBsMkMGkC+GpkIPLJMDtgsA4f8V0w==' '-proj' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/sessionLogs/session_0' '-init' '-hidden' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/.tmp/.initCmds.tcl' '1_i2c_1.tcl' '-hidden' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/.tmp/.postCmds.tcl'
+# pid       : 9412
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:41551' '-nowindow' '-style' 'windows' '-exitonerror' '-data' 'AAAAynicY2RgYLCp////PwMYMD6A0Aw2jAyoAMRnQhUJbEChGRhYYZphSliAmItBl6GAoYghnyELyNNi0ANCfSA7HS6aypDMUMJQDBQ1ZIhnyGQwAvLjgWwGBh6g3iSGRKBsMkMGkC+GpkIPLJMDtgsA4f8V0w==' '-proj' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/sessionLogs/session_0' '-init' '-hidden' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/.tmp/.initCmds.tcl' '1_i2c_1.tcl' '-hidden' '/users/rompel/jasper_executions/liveness/jgprojects/1_i2c_1/.tmp/.postCmds.tcl'
 analyze -sv09 ../1_i2c_1.sv
+elaborate -bbox_mul 1000000 -bbox_div 1000000 -bbox_mod 1000000 -bbox_a 1000000
+reset rst
+clock clk
+prove -all
+exit -force

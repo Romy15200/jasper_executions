@@ -1,77 +1,81 @@
-2025-11-27 00:09:53.491700 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.491746 (22722) main____ INFO    Jasper version info
-2025-11-27 00:09:53.491751 (22722) main____ INFO      tool      : Jasper 2024.06
-2025-11-27 00:09:53.491755 (22722) main____ INFO      version   : 2024.06p002 64 bits
-2025-11-27 00:09:53.491759 (22722) main____ INFO      build date: 2024.09.02 16:28:38 UTC
-2025-11-27 00:09:53.491761 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.491762 (22722) main____ INFO    Runtime info:
-2025-11-27 00:09:53.491765 (22722) main____ INFO      platform  : Linux 3.10.0-1160.62.1.el7.x86_64 x86_64
-2025-11-27 00:09:53.491771 (22722) main____ INFO      hostname  : vlsi-ria85
-2025-11-27 00:09:53.491775 (22722) main____ INFO      pid       : 22722
-2025-11-27 00:09:53.491778 (22722) main____ INFO      arguments : '-style' 'windows' '-proj' '../jgprojects/1_i2c_1' '-batch' '1_i2c_1.tcl'
-2025-11-27 00:09:53.491780 (22722) main____ INFO      locale    : ANSI_X3.4-1968
-2025-11-27 00:09:53.491782 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.491784 (22722) main____ INFO    System resource limits info:
-2025-11-27 00:09:53.491787 (22722) main____ INFO      virtual memory: unlimited
-2025-11-27 00:09:53.491791 (22722) main____ INFO      cpu time      : unlimited
-2025-11-27 00:09:53.491796 (22722) main____ INFO      processes     : 4096
-2025-11-27 00:09:53.491802 (22722) main____ INFO      stack size    : 8388608 B
-2025-11-27 00:09:53.491805 (22722) main____ INFO      core file size: 1024 B
-2025-11-27 00:09:53.491808 (22722) main____ INFO      open files    : 4096
-2025-11-27 00:09:53.491811 (22722) main____ INFO      file size     : unlimited
-2025-11-27 00:09:53.491813 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.491815 (22722) main____ INFO    Memory statistics:
-2025-11-27 00:09:53.491817 (22722) main____ INFO      total physical memory  : 65714912 kB
-2025-11-27 00:09:53.491819 (22722) main____ INFO      free physical memory   : 27826264 kB
-2025-11-27 00:09:53.491822 (22722) main____ INFO      committed address space: 65608816 kB
-2025-11-27 00:09:53.491824 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.492367 (22722) main____ INFO    Important environment variables:
-2025-11-27 00:09:53.492379 (22722) main____ INFO      CDS_ASSURA         : '/eda/cadence/2023-24/RHELx86/ASSURA_04.16.115_231'
-2025-11-27 00:09:53.492383 (22722) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
-2025-11-27 00:09:53.492386 (22722) main____ INFO      CDS_CONFRML        : '/eda/cadence/2023-24/RHELx86/CONFRML_23.10.300'
-2025-11-27 00:09:53.492390 (22722) main____ INFO      CDS_DDIEXPORT      : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000'
-2025-11-27 00:09:53.492393 (22722) main____ INFO      CDS_EMX            : '/eda/cadence/2023-24/RHELx86/EMX_23.10.000'
-2025-11-27 00:09:53.492396 (22722) main____ INFO      CDS_GENUS          : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/GENUS221'
-2025-11-27 00:09:53.492399 (22722) main____ INFO      CDS_IC             : '/eda/cadence/2023-24/RHELx86/IC_23.10.020'
-2025-11-27 00:09:53.492403 (22722) main____ INFO      CDS_INNOVUS        : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221'
-2025-11-27 00:09:53.492406 (22722) main____ INFO      CDS_JLS            : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/JLS221'
-2025-11-27 00:09:53.492412 (22722) main____ INFO      CDS_LIC_FILE       : '/etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.61'
-2025-11-27 00:09:53.492419 (22722) main____ INFO      CDS_LITMUS         : '/eda/cadence/2023-24/RHELx86/LITMUS_23.10.300'
-2025-11-27 00:09:53.492422 (22722) main____ INFO      CDS_MODUS          : '/eda/cadence/2023-24/RHELx86/MODUS_22.12.000'
-2025-11-27 00:09:53.492426 (22722) main____ INFO      CDS_MVS            : '/eda/cadence/2023-24/RHELx86/MVS_21.12.000'
-2025-11-27 00:09:53.492430 (22722) main____ INFO      CDS_Netlisting_Mode: 'Analog'
-2025-11-27 00:09:53.492433 (22722) main____ INFO      CDS_PEGASUS        : '/eda/cadence/2023-24/RHELx86/PEGASUS_23.11.000'
-2025-11-27 00:09:53.492437 (22722) main____ INFO      CDS_PEGASUSDFM     : '/eda/cadence/2023-24/RHELx86/PEGASUSDFM_23.11.000'
-2025-11-27 00:09:53.492440 (22722) main____ INFO      CDS_PVS            : '/eda/cadence/2023-24/RHELx86/PVS_22.22.000'
-2025-11-27 00:09:53.492443 (22722) main____ INFO      CDS_QUANTUS        : '/eda/cadence/2023-24/RHELx86/QUANTUS_23.10.000'
-2025-11-27 00:09:53.492446 (22722) main____ INFO      CDS_SPECTRE        : '/eda/cadence/2023-24/RHELx86/SPECTRE_23.10.242'
-2025-11-27 00:09:53.492449 (22722) main____ INFO      CDS_SSV            : '/eda/cadence/2023-24/RHELx86/SSV_22.13.000'
-2025-11-27 00:09:53.492451 (22722) main____ INFO      CDS_USE_PALETTE    : ''
-2025-11-27 00:09:53.492455 (22722) main____ INFO      CDS_VERISIUMDEBUG  : '/eda/cadence/2023-24/RHELx86/VERISIUMDEBUG_23.03.001'
-2025-11-27 00:09:53.492458 (22722) main____ INFO      CDS_VIPCAT         : '/eda/cadence/2023-24/RHELx86/VIPCAT_11.30.093'
-2025-11-27 00:09:53.492462 (22722) main____ INFO      CDS_VMANAGER       : '/eda/cadence/2023-24/RHELx86/VMANAGER_23.03.004'
-2025-11-27 00:09:53.492465 (22722) main____ INFO      CDS_XCELIUM        : '/eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007'
-2025-11-27 00:09:53.492468 (22722) main____ INFO      DISPLAY            : 'localhost:18.0'
-2025-11-27 00:09:53.492471 (22722) main____ INFO      JASPER_CPU_CHECK   : '1'
-2025-11-27 00:09:53.492474 (22722) main____ INFO      JASPER_INSTALL_DIR : '/tools/cadence2425/JASPER/jasper_2024.06p002'
-2025-11-27 00:09:53.492477 (22722) main____ INFO      JASPER_KERNEL_CHECK: '1'
-2025-11-27 00:09:53.492479 (22722) main____ INFO      JASPER_OS_CHECK    : '1'
-2025-11-27 00:09:53.492482 (22722) main____ INFO      LANG               : 'C'
-2025-11-27 00:09:53.492485 (22722) main____ INFO      TMPDIR             : '/tmp'
-2025-11-27 00:09:53.492487 (22722) main____ INFO    ----------------------------------------
-2025-11-27 00:09:53.492881 (22722) lic_core INFO    Initializing license system ...
-2025-11-27 00:09:53.496410 (22722) lic_core INFO    ... license system initialized.
-2025-11-27 00:09:53.505126 (22722) lic__man INFO    Claim 'fpv' for <ui>.
-2025-11-27 00:09:53.505156 (22722) lic_core INFO    (1) checking out 'jasper_fpv' ...
-2025-11-27 00:09:53.518788 (22722) lic_core INFO    ... (1) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
-2025-11-27 00:09:53.518806 (22722) lic_core INFO    (2) checking out 'jasper_fao' ...
-2025-11-27 00:09:53.526491 (22722) lic_core INFO    ... (2) checkout succeeded
-2025-11-27 00:09:53.562985 (22722) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
-2025-11-27 00:09:53.563638 (22722) session_ INFO    Analysis session with session id 'session_0' started (pid: 22740)
-2025-11-27 00:09:54.139397 (22722) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:34288)
-2025-11-27 00:09:54.540083 (22722) main____ INFO    About to exit: request to exit with status 1 received from analysis session 'session_0'
-2025-11-27 00:09:54.594193 (22722) session_ INFO    Analysis session 'session_0' disconnected.
-2025-11-27 00:09:54.594250 (22722) lic__man INFO    Unclaim everything for 'session_0'.
-2025-11-27 00:09:54.594326 (22722) session_ INFO    Process for analysis session 'session_0' has exited with exit status '1'.
-2025-11-27 00:09:56.442893 (22722) lic_core INFO    (2) checkin jasper_fao
-2025-11-27 00:09:56.444055 (22722) main____ INFO    Exiting with status 1.
+2025-11-27 12:34:21.804128 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.804172 (9393) main____ INFO    Jasper version info
+2025-11-27 12:34:21.804177 (9393) main____ INFO      tool      : Jasper 2024.06
+2025-11-27 12:34:21.804181 (9393) main____ INFO      version   : 2024.06p002 64 bits
+2025-11-27 12:34:21.804184 (9393) main____ INFO      build date: 2024.09.02 16:28:38 UTC
+2025-11-27 12:34:21.804186 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.804188 (9393) main____ INFO    Runtime info:
+2025-11-27 12:34:21.804190 (9393) main____ INFO      platform  : Linux 3.10.0-1160.62.1.el7.x86_64 x86_64
+2025-11-27 12:34:21.804196 (9393) main____ INFO      hostname  : vlsi-ria85
+2025-11-27 12:34:21.804199 (9393) main____ INFO      pid       : 9393
+2025-11-27 12:34:21.804202 (9393) main____ INFO      arguments : '-style' 'windows' '-proj' '../jgprojects/1_i2c_1' '-batch' '1_i2c_1.tcl'
+2025-11-27 12:34:21.804204 (9393) main____ INFO      locale    : ANSI_X3.4-1968
+2025-11-27 12:34:21.804206 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.804208 (9393) main____ INFO    System resource limits info:
+2025-11-27 12:34:21.804211 (9393) main____ INFO      virtual memory: unlimited
+2025-11-27 12:34:21.804214 (9393) main____ INFO      cpu time      : unlimited
+2025-11-27 12:34:21.804219 (9393) main____ INFO      processes     : 4096
+2025-11-27 12:34:21.804225 (9393) main____ INFO      stack size    : 8388608 B
+2025-11-27 12:34:21.804228 (9393) main____ INFO      core file size: 1024 B
+2025-11-27 12:34:21.804232 (9393) main____ INFO      open files    : 4096
+2025-11-27 12:34:21.804234 (9393) main____ INFO      file size     : unlimited
+2025-11-27 12:34:21.804236 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.804238 (9393) main____ INFO    Memory statistics:
+2025-11-27 12:34:21.804240 (9393) main____ INFO      total physical memory  : 65714912 kB
+2025-11-27 12:34:21.804243 (9393) main____ INFO      free physical memory   : 27179052 kB
+2025-11-27 12:34:21.804245 (9393) main____ INFO      committed address space: 65684848 kB
+2025-11-27 12:34:21.804247 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.804783 (9393) main____ INFO    Important environment variables:
+2025-11-27 12:34:21.804795 (9393) main____ INFO      CDS_ASSURA         : '/eda/cadence/2023-24/RHELx86/ASSURA_04.16.115_231'
+2025-11-27 12:34:21.804799 (9393) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
+2025-11-27 12:34:21.804802 (9393) main____ INFO      CDS_CONFRML        : '/eda/cadence/2023-24/RHELx86/CONFRML_23.10.300'
+2025-11-27 12:34:21.804806 (9393) main____ INFO      CDS_DDIEXPORT      : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000'
+2025-11-27 12:34:21.804809 (9393) main____ INFO      CDS_EMX            : '/eda/cadence/2023-24/RHELx86/EMX_23.10.000'
+2025-11-27 12:34:21.804812 (9393) main____ INFO      CDS_GENUS          : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/GENUS221'
+2025-11-27 12:34:21.804815 (9393) main____ INFO      CDS_IC             : '/eda/cadence/2023-24/RHELx86/IC_23.10.020'
+2025-11-27 12:34:21.804819 (9393) main____ INFO      CDS_INNOVUS        : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/INNOVUS221'
+2025-11-27 12:34:21.804823 (9393) main____ INFO      CDS_JLS            : '/eda/cadence/2023-24/RHELx86/DDIEXPORT_22.33.000/JLS221'
+2025-11-27 12:34:21.804828 (9393) main____ INFO      CDS_LIC_FILE       : '/etc/local/cadence/license_8x.3868dd0560aa:5280@132.68.59.69:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.64:/etc/local/cadence/license_8x.0894ef683fc3:5280@132.68.59.79:/etc/local/cadence/license_8x.1831bfb82c67:5280@132.68.59.61'
+2025-11-27 12:34:21.804831 (9393) main____ INFO      CDS_LITMUS         : '/eda/cadence/2023-24/RHELx86/LITMUS_23.10.300'
+2025-11-27 12:34:21.804835 (9393) main____ INFO      CDS_MODUS          : '/eda/cadence/2023-24/RHELx86/MODUS_22.12.000'
+2025-11-27 12:34:21.804838 (9393) main____ INFO      CDS_MVS            : '/eda/cadence/2023-24/RHELx86/MVS_21.12.000'
+2025-11-27 12:34:21.804842 (9393) main____ INFO      CDS_Netlisting_Mode: 'Analog'
+2025-11-27 12:34:21.804845 (9393) main____ INFO      CDS_PEGASUS        : '/eda/cadence/2023-24/RHELx86/PEGASUS_23.11.000'
+2025-11-27 12:34:21.804849 (9393) main____ INFO      CDS_PEGASUSDFM     : '/eda/cadence/2023-24/RHELx86/PEGASUSDFM_23.11.000'
+2025-11-27 12:34:21.804852 (9393) main____ INFO      CDS_PVS            : '/eda/cadence/2023-24/RHELx86/PVS_22.22.000'
+2025-11-27 12:34:21.804855 (9393) main____ INFO      CDS_QUANTUS        : '/eda/cadence/2023-24/RHELx86/QUANTUS_23.10.000'
+2025-11-27 12:34:21.804858 (9393) main____ INFO      CDS_SPECTRE        : '/eda/cadence/2023-24/RHELx86/SPECTRE_23.10.242'
+2025-11-27 12:34:21.804861 (9393) main____ INFO      CDS_SSV            : '/eda/cadence/2023-24/RHELx86/SSV_22.13.000'
+2025-11-27 12:34:21.804863 (9393) main____ INFO      CDS_USE_PALETTE    : ''
+2025-11-27 12:34:21.804866 (9393) main____ INFO      CDS_VERISIUMDEBUG  : '/eda/cadence/2023-24/RHELx86/VERISIUMDEBUG_23.03.001'
+2025-11-27 12:34:21.804870 (9393) main____ INFO      CDS_VIPCAT         : '/eda/cadence/2023-24/RHELx86/VIPCAT_11.30.093'
+2025-11-27 12:34:21.804873 (9393) main____ INFO      CDS_VMANAGER       : '/eda/cadence/2023-24/RHELx86/VMANAGER_23.03.004'
+2025-11-27 12:34:21.804876 (9393) main____ INFO      CDS_XCELIUM        : '/eda/cadence/2023-24/RHELx86/XCELIUM_23.03.007'
+2025-11-27 12:34:21.804879 (9393) main____ INFO      DISPLAY            : 'localhost:10.0'
+2025-11-27 12:34:21.804882 (9393) main____ INFO      JASPER_CPU_CHECK   : '1'
+2025-11-27 12:34:21.804885 (9393) main____ INFO      JASPER_INSTALL_DIR : '/tools/cadence2425/JASPER/jasper_2024.06p002'
+2025-11-27 12:34:21.804887 (9393) main____ INFO      JASPER_KERNEL_CHECK: '1'
+2025-11-27 12:34:21.804890 (9393) main____ INFO      JASPER_OS_CHECK    : '1'
+2025-11-27 12:34:21.804893 (9393) main____ INFO      LANG               : 'C'
+2025-11-27 12:34:21.804895 (9393) main____ INFO      TMPDIR             : '/tmp'
+2025-11-27 12:34:21.804897 (9393) main____ INFO    ----------------------------------------
+2025-11-27 12:34:21.805289 (9393) lic_core INFO    Initializing license system ...
+2025-11-27 12:34:21.817830 (9393) lic_core INFO    ... license system initialized.
+2025-11-27 12:34:21.838075 (9393) lic__man INFO    Claim 'fpv' for <ui>.
+2025-11-27 12:34:21.838129 (9393) lic_core INFO    (1) checking out 'jasper_fpv' ...
+2025-11-27 12:34:22.159083 (9393) lic_core INFO    ... (1) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2025-11-27 12:34:22.159103 (9393) lic_core INFO    (2) checking out 'jasper_fao' ...
+2025-11-27 12:34:22.168130 (9393) lic_core INFO    ... (2) checkout succeeded
+2025-11-27 12:34:22.192502 (9393) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2025-11-27 12:34:22.193450 (9393) session_ INFO    Analysis session with session id 'session_0' started (pid: 9412)
+2025-11-27 12:34:22.759625 (9393) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:45736)
+2025-11-27 12:34:23.179320 (9393) lic__man INFO    Unclaim everything for 'session_0'.
+2025-11-27 12:34:23.221609 (9393) lic__man INFO    Claim 'fpv' for 'session_0'.
+2025-11-27 12:34:23.221623 (9393) lic__man INFO    Claim 'fpv' for 'session_0/prove-0'.
+2025-11-27 12:34:23.395403 (9393) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2025-11-27 12:34:23.396930 (9393) main____ INFO    About to exit: request to exit with status 0 received from analysis session 'session_0'
+2025-11-27 12:34:23.457686 (9393) session_ INFO    Analysis session 'session_0' disconnected.
+2025-11-27 12:34:23.457786 (9393) lic__man INFO    Unclaim everything for 'session_0'.
+2025-11-27 12:34:23.457863 (9393) session_ INFO    Process for analysis session 'session_0' has exited with exit status '0'.
+2025-11-27 12:34:25.333129 (9393) lic_core INFO    (2) checkin jasper_fao
+2025-11-27 12:34:25.334530 (9393) main____ INFO    Exiting with status 0.
