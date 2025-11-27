@@ -39,5 +39,5 @@ module i2cStrech(input clk, input rst, input scl_not_ena, output reg data_clk, o
       	else
         	switch_range = 0;
 	end
-	p1: assert property  ((@(posedge clk) s_eventually (!rst and !scl_not_ena) -> stretch)) ;
+	p1: assert property  ((@(posedge clk) s_eventually (!rst and !scl_not_ena) |-> stretch)) ;
 endmodule
