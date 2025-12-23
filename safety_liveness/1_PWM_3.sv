@@ -3,6 +3,8 @@ module PWM_TOP (input clk, input [3:0] sw, output reg pulse_red, output reg lb_p
   localparam CBITS = 12;    // Change pulse_wideR accordingly
   
   wire [CBITS-1:0] pulse_wideR;
+  wire [CBITS-1:0] lbR;
+  wire [CBITS-1:0] ubR;
   assign pulse_wideR = {1'b0, sw[3:1], 1'b1, 7'd0};     // (CBTIS-5)
   assign lbR = {1'b0, 4'b0000, 1'b1, 7'd0};
   assign ubR = {1'b0, 4'b1111, 1'b1, 7'd0};
@@ -26,7 +28,10 @@ module PWM_TOP (input clk, input [3:0] sw, output reg pulse_red, output reg lb_p
       ub_pulse = 1;
     else
       ub_pulse = 0;
-  end
+  end    
+  
+  p1: assert property  ((@(posedge clk) (always s_eventually !ub_pulse) and s_nexttime always (!ub_pulse implies !pulse_red))) ;
 
-	p1: assert property  ((@(posedge clk) (always s_eventually !ub_pulse) and s_nexttime always (!ub_pulse implies !pulse_red))) ;
+
+
 endmodule
